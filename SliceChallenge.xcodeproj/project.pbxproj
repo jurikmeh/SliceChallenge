@@ -11,6 +11,21 @@
 		0B3443BE26CB8BEE00D7E48F /* PizzabotCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3443BD26CB8BEE00D7E48F /* PizzabotCommands.swift */; };
 		0B3443C426CB8C2F00D7E48F /* Pizzabot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3443C326CB8C2E00D7E48F /* Pizzabot.swift */; };
 		0B3443C626CB911400D7E48F /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3443C526CB911400D7E48F /* Validator.swift */; };
+		0B3AF19026CFD55100BD8FB2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3443B626CB848300D7E48F /* main.swift */; };
+		0B3AF19126CFD55100BD8FB2 /* GeneralError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B534A4D26CFCF1900F96FA0 /* GeneralError.swift */; };
+		0B3AF19226CFD55100BD8FB2 /* PizzabotError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8E71926CD12EB007A79EC /* PizzabotError.swift */; };
+		0B3AF19326CFD55100BD8FB2 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8E70F26CCEBAF007A79EC /* ValidationError.swift */; };
+		0B3AF19426CFD55100BD8FB2 /* FormatterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8E71326CCFFBF007A79EC /* FormatterError.swift */; };
+		0B3AF19526CFD55100BD8FB2 /* Pizzabot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3443C326CB8C2E00D7E48F /* Pizzabot.swift */; };
+		0B3AF19626CFD55100BD8FB2 /* PizzabotType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8E71626CD044D007A79EC /* PizzabotType.swift */; };
+		0B3AF19726CFD55100BD8FB2 /* PizzabotCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3443BD26CB8BEE00D7E48F /* PizzabotCommands.swift */; };
+		0B3AF19826CFD55100BD8FB2 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3443C526CB911400D7E48F /* Validator.swift */; };
+		0B3AF19926CFD55100BD8FB2 /* ValidatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8E70D26CCEABB007A79EC /* ValidatorType.swift */; };
+		0B3AF19A26CFD55100BD8FB2 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B54999826CBAB1B00BD317F /* Formatter.swift */; };
+		0B3AF19B26CFD55100BD8FB2 /* FormatterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8E71126CCF0B2007A79EC /* FormatterType.swift */; };
+		0B3AF19D26CFD92600BD8FB2 /* PizzabotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AF18D26CFD53300BD8FB2 /* PizzabotTests.swift */; };
+		0B3AF19F26CFD98500BD8FB2 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AF19E26CFD98500BD8FB2 /* ValidatorTests.swift */; };
+		0B3AF1A126CFDCA500BD8FB2 /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AF1A026CFDCA500BD8FB2 /* FormatterTests.swift */; };
 		0B534A4E26CFCF1900F96FA0 /* GeneralError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B534A4D26CFCF1900F96FA0 /* GeneralError.swift */; };
 		0B54999926CBAB1B00BD317F /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B54999826CBAB1B00BD317F /* Formatter.swift */; };
 		0BF8E70E26CCEABB007A79EC /* ValidatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8E70D26CCEABB007A79EC /* ValidatorType.swift */; };
@@ -39,6 +54,11 @@
 		0B3443BD26CB8BEE00D7E48F /* PizzabotCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzabotCommands.swift; sourceTree = "<group>"; };
 		0B3443C326CB8C2E00D7E48F /* Pizzabot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizzabot.swift; sourceTree = "<group>"; };
 		0B3443C526CB911400D7E48F /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		0B3AF18426CFD52A00BD8FB2 /* PizzabotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PizzabotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B3AF18C26CFD53300BD8FB2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B3AF18D26CFD53300BD8FB2 /* PizzabotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzabotTests.swift; sourceTree = "<group>"; };
+		0B3AF19E26CFD98500BD8FB2 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
+		0B3AF1A026CFDCA500BD8FB2 /* FormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
 		0B534A4D26CFCF1900F96FA0 /* GeneralError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralError.swift; sourceTree = "<group>"; };
 		0B54999826CBAB1B00BD317F /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		0BF8E70D26CCEABB007A79EC /* ValidatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorType.swift; sourceTree = "<group>"; };
@@ -57,6 +77,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0B3AF18126CFD52A00BD8FB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -64,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				0B3443B526CB848300D7E48F /* SliceChallenge */,
+				0B3AF18526CFD52A00BD8FB2 /* PizzabotTests */,
 				0B3443B426CB848300D7E48F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				0B3443B326CB848300D7E48F /* SliceChallenge */,
+				0B3AF18426CFD52A00BD8FB2 /* PizzabotTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +126,17 @@
 				0BF8E71326CCFFBF007A79EC /* FormatterError.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		0B3AF18526CFD52A00BD8FB2 /* PizzabotTests */ = {
+			isa = PBXGroup;
+			children = (
+				0B3AF18C26CFD53300BD8FB2 /* Info.plist */,
+				0B3AF18D26CFD53300BD8FB2 /* PizzabotTests.swift */,
+				0B3AF19E26CFD98500BD8FB2 /* ValidatorTests.swift */,
+				0B3AF1A026CFDCA500BD8FB2 /* FormatterTests.swift */,
+			);
+			path = PizzabotTests;
 			sourceTree = "<group>";
 		};
 		0B54999726CBAB0F00BD317F /* Formatter */ = {
@@ -147,6 +187,23 @@
 			productReference = 0B3443B326CB848300D7E48F /* SliceChallenge */;
 			productType = "com.apple.product-type.tool";
 		};
+		0B3AF18326CFD52A00BD8FB2 /* PizzabotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B3AF18926CFD52A00BD8FB2 /* Build configuration list for PBXNativeTarget "PizzabotTests" */;
+			buildPhases = (
+				0B3AF18026CFD52A00BD8FB2 /* Sources */,
+				0B3AF18126CFD52A00BD8FB2 /* Frameworks */,
+				0B3AF18226CFD52A00BD8FB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PizzabotTests;
+			productName = PizzabotTests;
+			productReference = 0B3AF18426CFD52A00BD8FB2 /* PizzabotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -157,6 +214,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					0B3443B226CB848300D7E48F = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					0B3AF18326CFD52A00BD8FB2 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
@@ -175,9 +235,20 @@
 			projectRoot = "";
 			targets = (
 				0B3443B226CB848300D7E48F /* SliceChallenge */,
+				0B3AF18326CFD52A00BD8FB2 /* PizzabotTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B3AF18226CFD52A00BD8FB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0B3443AF26CB848300D7E48F /* Sources */ = {
@@ -196,6 +267,28 @@
 				0BF8E70E26CCEABB007A79EC /* ValidatorType.swift in Sources */,
 				0BF8E71426CCFFBF007A79EC /* FormatterError.swift in Sources */,
 				0B54999926CBAB1B00BD317F /* Formatter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B3AF18026CFD52A00BD8FB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B3AF19D26CFD92600BD8FB2 /* PizzabotTests.swift in Sources */,
+				0B3AF19026CFD55100BD8FB2 /* main.swift in Sources */,
+				0B3AF19126CFD55100BD8FB2 /* GeneralError.swift in Sources */,
+				0B3AF19226CFD55100BD8FB2 /* PizzabotError.swift in Sources */,
+				0B3AF19326CFD55100BD8FB2 /* ValidationError.swift in Sources */,
+				0B3AF19426CFD55100BD8FB2 /* FormatterError.swift in Sources */,
+				0B3AF19526CFD55100BD8FB2 /* Pizzabot.swift in Sources */,
+				0B3AF19626CFD55100BD8FB2 /* PizzabotType.swift in Sources */,
+				0B3AF19F26CFD98500BD8FB2 /* ValidatorTests.swift in Sources */,
+				0B3AF19726CFD55100BD8FB2 /* PizzabotCommands.swift in Sources */,
+				0B3AF19826CFD55100BD8FB2 /* Validator.swift in Sources */,
+				0B3AF19926CFD55100BD8FB2 /* ValidatorType.swift in Sources */,
+				0B3AF1A126CFDCA500BD8FB2 /* FormatterTests.swift in Sources */,
+				0B3AF19A26CFD55100BD8FB2 /* Formatter.swift in Sources */,
+				0B3AF19B26CFD55100BD8FB2 /* FormatterType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +433,42 @@
 			};
 			name = Release;
 		};
+		0B3AF18A26CFD52A00BD8FB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S76FT5J7VD;
+				INFOPLIST_FILE = PizzabotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kasper.itech-group.com.PizzabotTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0B3AF18B26CFD52A00BD8FB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S76FT5J7VD;
+				INFOPLIST_FILE = PizzabotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kasper.itech-group.com.PizzabotTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -357,6 +486,15 @@
 			buildConfigurations = (
 				0B3443BB26CB848300D7E48F /* Debug */,
 				0B3443BC26CB848300D7E48F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B3AF18926CFD52A00BD8FB2 /* Build configuration list for PBXNativeTarget "PizzabotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B3AF18A26CFD52A00BD8FB2 /* Debug */,
+				0B3AF18B26CFD52A00BD8FB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

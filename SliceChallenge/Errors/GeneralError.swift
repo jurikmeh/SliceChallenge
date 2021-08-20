@@ -1,5 +1,5 @@
 //
-//  MyError.swift
+//  GeneralError.swift
 //  SliceChallenge
 //
 //  Created by yurykasper on 20.08.21.

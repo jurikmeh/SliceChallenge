@@ -17,7 +17,7 @@ enum PizzabotError: Error {
         case .noStartPoint:
             return "There is no start point at all!"
         case .orderOutOfRange:
-            return "there is order out of range"
+            return "There is order out of delivery range"
         }
     }
 }

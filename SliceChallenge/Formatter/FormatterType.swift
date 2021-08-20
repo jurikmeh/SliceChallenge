@@ -11,5 +11,5 @@ import Foundation
 ///
 /// Types that conform to the *FormatterType* protocol should contain a method for parsing and transforming source string into different types of data. Also should throw all possible errors.
 protocol FormatterType {
-    func transform(input: String) throws -> (gridSize: (x: Int, y: Int), points: [Point])
+    func transform(input: String) throws -> (gridSize: CGPoint, points: [CGPoint])
 }

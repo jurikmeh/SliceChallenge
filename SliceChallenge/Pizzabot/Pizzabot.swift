@@ -11,13 +11,11 @@ import Foundation
 final class Pizzabot: PizzabotType {
     private let validator: ValidatorType = Validator()
     private let formatter: FormatterType = Formatter()
-    var points: [Point]?
-    var maxDeliveryDistance: (xAxis: Int?, yAxis: Int?)
-    var startPoint: Point {
-        return Point(x: 0, y: 0)
+    var points: [CGPoint]?
+    var maxDeliveryDistance: CGPoint?
+    var startPoint: CGPoint {
+        return CGPoint(x: 0, y: 0)
     }
-    
-    init() {}
     
     /// Returns list of instructions for pizzabot in one line
     /// - Parameter input: source string for getting instruction
@@ -28,8 +26,7 @@ final class Pizzabot: PizzabotType {
             let gridData = try formatter.transform(input: input)
             points = gridData.points
             try containStartPoint()
-            maxDeliveryDistance.xAxis = gridData.gridSize.x
-            maxDeliveryDistance.yAxis = gridData.gridSize.y
+            maxDeliveryDistance = gridData.gridSize
             try pointOutOfRange()
         } catch let error as ValidationError {
             print(error.description)
@@ -64,7 +61,7 @@ extension Pizzabot {
     /// - `PizzabotError.noStartPoint` indicates that route does not contain the origin point
     func containStartPoint() throws {
         guard let points = self.points else { return }
-        guard points.contains(startPoint) else { throw PizzabotError.noStartPoint }
+        guard let origin = points.first, origin == startPoint else { throw PizzabotError.noStartPoint }
     }
     
     /// A way to check if the point is out of delivery range.
@@ -73,9 +70,9 @@ extension Pizzabot {
     /// - Throws:
     /// - `PizzabotError.orderOutOfRange` indicates that there is at least one point which is out of delivery range
     func pointOutOfRange() throws {
-        guard let xDistance = self.maxDeliveryDistance.xAxis, let yDistance = maxDeliveryDistance.yAxis else { return }
+        guard let maxDeliveryDistance = self.maxDeliveryDistance else { return }
         guard let points = self.points else { return }
-        guard points.filter({ $0.x > xDistance || $0.y > yDistance }).isEmpty else {
+        guard points.filter({ $0.x > maxDeliveryDistance.x || $0.y > maxDeliveryDistance.y }).isEmpty else {
             throw  PizzabotError.orderOutOfRange
         }
     }
@@ -86,12 +83,12 @@ extension Pizzabot {
     /// - Parameter first: describes the start point
     /// - Parameter next: describes end point
     /// - Returns: list of commands for pizzabot
-    private func getInstructions(for first: Point, and next: Point) -> [String] {
+    private func getInstructions(for first: CGPoint, and next: CGPoint) -> [String] {
         var instructions: [String] = []
-        let deltaX = next.x - first.x
+        let deltaX = Int(next.x - first.x)
         instructions += Array(repeating: (deltaX >= 0) ? PizzabotCommands.east.rawValue : PizzabotCommands.west.rawValue , count: abs(deltaX))
         
-        let deltaY = next.y - first.y
+        let deltaY = Int(next.y - first.y)
         instructions += Array(repeating: (deltaY >= 0) ? PizzabotCommands.north.rawValue : PizzabotCommands.south.rawValue , count: abs(deltaY))
         
         instructions.append("\(PizzabotCommands.dropPizza.rawValue) ")

@@ -16,7 +16,7 @@ struct Formatter: FormatterType {
     /// - `FormatterError.unspecifiedGridSize` if `input` does not contain size of the grid
     /// - Parameter input: source string for getting additional data
     /// - Returns: tuple which represents maximum delivery distance on x-axis and y-axis and a new array consists of points
-    func transform(input: String) throws -> (gridSize: (x: Int, y: Int), points: [Point]) {
+    func transform(input: String) throws -> (gridSize: CGPoint, points: [CGPoint]) {
         let digitArray = input.filter { $0 != ")" && $0 != " " }.split(separator: "(")
         guard let size = digitArray.first, size.contains("x") else { throw FormatterError.unspecifiedGridSize }
         
@@ -25,7 +25,7 @@ struct Formatter: FormatterType {
             numbers += String($0).components(separatedBy: Separator.separatorItems).compactMap { Int($0) }
         }
         
-        let gridSize = (x: numbers[0], y: numbers[1])
+        let gridSize = CGPoint(x: numbers[0], y: numbers[1])
         numbers.removeFirst(2)
         
         let points = addPoints(from: numbers)
@@ -44,10 +44,10 @@ private extension Formatter {
     /// Creates an array of points based on source array of integers running though `x` and `y` pairs.
     /// - Parameter numbers: source array of integers
     /// - Returns: new array consists of points
-    func addPoints(from numbers: [Int]) -> [Point] {
-        var points: [Point] = []
+    func addPoints(from numbers: [Int]) -> [CGPoint] {
+        var points: [CGPoint] = []
         for index in stride(from: 0, to: numbers.count, by: 2) {
-            let point = Point(x: numbers[index], y: numbers[index+1])
+            let point = CGPoint(x: numbers[index], y: numbers[index+1])
             points.append(point)
         }
         return points

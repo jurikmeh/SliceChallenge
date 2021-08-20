@@ -12,7 +12,7 @@ import Foundation
 /// Types that conform to the *PizzabotType* protocol should contain one property called `startPoint` which represents origin on coordinate grid.
 /// And three methods `pointOutOfRange()`, `containStartPoint()` and `pizzabot(input: String)`.
 protocol PizzabotType {
-    var startPoint: Point { get }
+    var startPoint: CGPoint { get }
     func containStartPoint() throws
     func pointOutOfRange() throws
     func pizzabot(input: String) -> String?

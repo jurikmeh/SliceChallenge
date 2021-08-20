@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0B3443B726CB848300D7E48F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3443B626CB848300D7E48F /* main.swift */; };
 		0B3443BE26CB8BEE00D7E48F /* PizzabotCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3443BD26CB8BEE00D7E48F /* PizzabotCommands.swift */; };
-		0B3443C026CB8BFE00D7E48F /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3443BF26CB8BFE00D7E48F /* Point.swift */; };
 		0B3443C426CB8C2F00D7E48F /* Pizzabot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3443C326CB8C2E00D7E48F /* Pizzabot.swift */; };
 		0B3443C626CB911400D7E48F /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3443C526CB911400D7E48F /* Validator.swift */; };
 		0B54999926CBAB1B00BD317F /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B54999826CBAB1B00BD317F /* Formatter.swift */; };
@@ -37,7 +36,6 @@
 		0B3443B326CB848300D7E48F /* SliceChallenge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SliceChallenge; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3443B626CB848300D7E48F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0B3443BD26CB8BEE00D7E48F /* PizzabotCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzabotCommands.swift; sourceTree = "<group>"; };
-		0B3443BF26CB8BFE00D7E48F /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		0B3443C326CB8C2E00D7E48F /* Pizzabot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizzabot.swift; sourceTree = "<group>"; };
 		0B3443C526CB911400D7E48F /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		0B54999826CBAB1B00BD317F /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				0B3443B626CB848300D7E48F /* main.swift */,
-				0BF8E71826CD0480007A79EC /* Point */,
 				0BF8E71526CD043D007A79EC /* Pizzabot */,
 				0BF8E70C26CCEAA1007A79EC /* Validator */,
 				0B54999726CBAB0F00BD317F /* Formatter */,
@@ -117,14 +114,6 @@
 				0B3443BD26CB8BEE00D7E48F /* PizzabotCommands.swift */,
 			);
 			path = Pizzabot;
-			sourceTree = "<group>";
-		};
-		0BF8E71826CD0480007A79EC /* Point */ = {
-			isa = PBXGroup;
-			children = (
-				0B3443BF26CB8BFE00D7E48F /* Point.swift */,
-			);
-			path = Point;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +179,6 @@
 				0BF8E71A26CD12EB007A79EC /* PizzabotError.swift in Sources */,
 				0BF8E71226CCF0B2007A79EC /* FormatterType.swift in Sources */,
 				0B3443BE26CB8BEE00D7E48F /* PizzabotCommands.swift in Sources */,
-				0B3443C026CB8BFE00D7E48F /* Point.swift in Sources */,
 				0B3443C426CB8C2F00D7E48F /* Pizzabot.swift in Sources */,
 				0B3443C626CB911400D7E48F /* Validator.swift in Sources */,
 				0BF8E70E26CCEABB007A79EC /* ValidatorType.swift in Sources */,

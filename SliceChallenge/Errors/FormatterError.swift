@@ -8,7 +8,7 @@
 import Foundation
 
 /// Describes all possible errors during formatting input data.
-enum FormatterError: Error {
+enum FormatterError: GeneralError {
     case unspecifiedGridSize
     
     var description: String {

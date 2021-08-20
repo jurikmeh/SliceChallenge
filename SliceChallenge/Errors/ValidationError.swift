@@ -8,7 +8,7 @@
 import Foundation
 
 /// Describes all possible errors during validation input data.
-enum ValidationError: Error {
+enum ValidationError: GeneralError {
     case emptyInput
     case invalidInput
     

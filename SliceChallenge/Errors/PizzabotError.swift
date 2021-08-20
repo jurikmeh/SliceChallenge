@@ -8,7 +8,7 @@
 import Foundation
 
 /// Describes all possible errors during the operation of the pizzabot.
-enum PizzabotError: Error {
+enum PizzabotError: GeneralError {
     case noStartPoint
     case orderOutOfRange
     

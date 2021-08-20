@@ -17,16 +17,9 @@ var instruction: String?
 do {
     try validator.validate(input: sourceData)
     let gridData = try formatter.transform(input: sourceData)
-    try bot.setData(gridSize: gridData.gridSize, points: gridData.points)
-    instruction = bot.getInstruction()
-} catch let error as ValidationError {
+    instruction = try bot.deliver(gridSize: gridData.gridSize, points: gridData.points)
+} catch let error as GeneralError {
     instruction = error.description
-} catch let error as FormatterError {
-    instruction = error.description
-} catch let error as PizzabotError {
-    instruction = error.description
-} catch {
-    instruction = error.localizedDescription
 }
 
 if let instruction = instruction {

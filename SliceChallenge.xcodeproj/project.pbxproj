@@ -11,6 +11,7 @@
 		0B3443BE26CB8BEE00D7E48F /* PizzabotCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3443BD26CB8BEE00D7E48F /* PizzabotCommands.swift */; };
 		0B3443C426CB8C2F00D7E48F /* Pizzabot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3443C326CB8C2E00D7E48F /* Pizzabot.swift */; };
 		0B3443C626CB911400D7E48F /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3443C526CB911400D7E48F /* Validator.swift */; };
+		0B534A4E26CFCF1900F96FA0 /* GeneralError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B534A4D26CFCF1900F96FA0 /* GeneralError.swift */; };
 		0B54999926CBAB1B00BD317F /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B54999826CBAB1B00BD317F /* Formatter.swift */; };
 		0BF8E70E26CCEABB007A79EC /* ValidatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8E70D26CCEABB007A79EC /* ValidatorType.swift */; };
 		0BF8E71026CCEBAF007A79EC /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8E70F26CCEBAF007A79EC /* ValidationError.swift */; };
@@ -38,6 +39,7 @@
 		0B3443BD26CB8BEE00D7E48F /* PizzabotCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzabotCommands.swift; sourceTree = "<group>"; };
 		0B3443C326CB8C2E00D7E48F /* Pizzabot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizzabot.swift; sourceTree = "<group>"; };
 		0B3443C526CB911400D7E48F /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		0B534A4D26CFCF1900F96FA0 /* GeneralError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralError.swift; sourceTree = "<group>"; };
 		0B54999826CBAB1B00BD317F /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		0BF8E70D26CCEABB007A79EC /* ValidatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorType.swift; sourceTree = "<group>"; };
 		0BF8E70F26CCEBAF007A79EC /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				0B3443B626CB848300D7E48F /* main.swift */,
+				0B3AF17F26CFD01800BD8FB2 /* Errors */,
 				0BF8E71526CD043D007A79EC /* Pizzabot */,
 				0BF8E70C26CCEAA1007A79EC /* Validator */,
 				0B54999726CBAB0F00BD317F /* Formatter */,
@@ -85,12 +88,22 @@
 			path = SliceChallenge;
 			sourceTree = "<group>";
 		};
+		0B3AF17F26CFD01800BD8FB2 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				0B534A4D26CFCF1900F96FA0 /* GeneralError.swift */,
+				0BF8E71926CD12EB007A79EC /* PizzabotError.swift */,
+				0BF8E70F26CCEBAF007A79EC /* ValidationError.swift */,
+				0BF8E71326CCFFBF007A79EC /* FormatterError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		0B54999726CBAB0F00BD317F /* Formatter */ = {
 			isa = PBXGroup;
 			children = (
 				0B54999826CBAB1B00BD317F /* Formatter.swift */,
 				0BF8E71126CCF0B2007A79EC /* FormatterType.swift */,
-				0BF8E71326CCFFBF007A79EC /* FormatterError.swift */,
 			);
 			path = Formatter;
 			sourceTree = "<group>";
@@ -100,7 +113,6 @@
 			children = (
 				0B3443C526CB911400D7E48F /* Validator.swift */,
 				0BF8E70D26CCEABB007A79EC /* ValidatorType.swift */,
-				0BF8E70F26CCEBAF007A79EC /* ValidationError.swift */,
 			);
 			path = Validator;
 			sourceTree = "<group>";
@@ -110,7 +122,6 @@
 			children = (
 				0B3443C326CB8C2E00D7E48F /* Pizzabot.swift */,
 				0BF8E71626CD044D007A79EC /* PizzabotType.swift */,
-				0BF8E71926CD12EB007A79EC /* PizzabotError.swift */,
 				0B3443BD26CB8BEE00D7E48F /* PizzabotCommands.swift */,
 			);
 			path = Pizzabot;
@@ -173,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B534A4E26CFCF1900F96FA0 /* GeneralError.swift in Sources */,
 				0B3443B726CB848300D7E48F /* main.swift in Sources */,
 				0BF8E71026CCEBAF007A79EC /* ValidationError.swift in Sources */,
 				0BF8E71726CD044D007A79EC /* PizzabotType.swift in Sources */,

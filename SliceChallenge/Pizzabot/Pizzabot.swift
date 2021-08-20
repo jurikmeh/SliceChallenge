@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// Describes the behavior of delivery bot
+/// Describes the behavior of pizzabot
 struct Pizzabot: PizzabotType {
     var points: [CGPoint]?
     var deliveryDistance: CGPoint?
@@ -15,25 +15,23 @@ struct Pizzabot: PizzabotType {
         return CGPoint(x: 0, y: 0)
     }
     
-    /// Returns list of instructions for pizzabot in one line
-    /// - Parameter input: source string for getting instruction
-    /// - Returns: list of commands for pizzabot
-    func getInstruction() -> String? {
+    /// Returns instruction for pizzabot
+    /// - Parameter gridSize: point with maximum range of delivery on x-axis and y-axis
+    /// - Parameter points: array of points where pizzabot should deliver orders
+    /// - Returns: final command for pizzabot
+    mutating func deliver(gridSize: CGPoint, points: [CGPoint]) throws -> String? {
+        self.points = points
+        try containStartPoint()
+        deliveryDistance = gridSize
+        try pointOutOfRange()
+        
         var instructions: [String] = []
-        guard let points = self.points else { return nil }
         for index in 0..<points.count - 1 {
             let firstPoint = points[index]
             let nextPoint = points[index+1]
             instructions += createInstruction(for: firstPoint, and: nextPoint)
         }
         return instructions.joined()
-    }
-    
-    mutating func setData(gridSize: CGPoint, points: [CGPoint]) throws {
-        self.points = points
-        try containStartPoint()
-        deliveryDistance = gridSize
-        try pointOutOfRange()
     }
 }
 
@@ -61,7 +59,7 @@ private extension Pizzabot {
         }
     }
     
-    /// Returns list of instructions for pizzabot in one line
+    /// Returns array of instructions for pizzabot
     ///
     /// Based on the two coordinates, the difference in x and y is calculated, after which it is determined which instructions to give.
     /// - Parameter first: describes the start point

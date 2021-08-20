@@ -13,7 +13,6 @@ import Foundation
 /// And three methods `pointOutOfRange()`, `containStartPoint()` and `pizzabot(input: String)`.
 protocol PizzabotType {
     var startPoint: CGPoint { get }
-    func containStartPoint() throws
-    func pointOutOfRange() throws
-    func pizzabot(input: String) -> String?
+    func getInstruction(input: String) -> String?
+    mutating func setData(gridSize: CGPoint, points: [CGPoint]) throws
 }

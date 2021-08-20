@@ -8,11 +8,9 @@
 import Foundation
 
 /// Describes the behavior of delivery bot
-final class Pizzabot: PizzabotType {
-    private let validator: ValidatorType = Validator()
-    private let formatter: FormatterType = Formatter()
+struct Pizzabot: PizzabotType {
     var points: [CGPoint]?
-    var maxDeliveryDistance: CGPoint?
+    var deliveryDistance: CGPoint?
     var startPoint: CGPoint {
         return CGPoint(x: 0, y: 0)
     }
@@ -20,40 +18,26 @@ final class Pizzabot: PizzabotType {
     /// Returns list of instructions for pizzabot in one line
     /// - Parameter input: source string for getting instruction
     /// - Returns: list of commands for pizzabot
-    func pizzabot(input: String) -> String? {
-        do {
-            try validator.validate(input: input)
-            let gridData = try formatter.transform(input: input)
-            points = gridData.points
-            try containStartPoint()
-            maxDeliveryDistance = gridData.gridSize
-            try pointOutOfRange()
-        } catch let error as ValidationError {
-            print(error.description)
-            return nil
-        } catch let error as FormatterError {
-            print(error.description)
-            return nil
-        } catch let error as PizzabotError {
-            print(error.description)
-            return nil
-        } catch {
-            print(error.localizedDescription)
-            return nil
-        }
-        
+    func getInstruction(input: String) -> String? {
         var instructions: [String] = []
         guard let points = self.points else { return nil }
         for index in 0..<points.count - 1 {
             let firstPoint = points[index]
             let nextPoint = points[index+1]
-            instructions += getInstructions(for: firstPoint, and: nextPoint)
+            instructions += createInstruction(for: firstPoint, and: nextPoint)
         }
         return instructions.joined()
     }
+    
+    mutating func setData(gridSize: CGPoint, points: [CGPoint]) throws {
+        self.points = points
+        try containStartPoint()
+        deliveryDistance = gridSize
+        try pointOutOfRange()
+    }
 }
 
-extension Pizzabot {
+private extension Pizzabot {
     /// A way to check if the route has start point.
     ///
     /// Use this method to validate that pizzabot has start point at (0,0)
@@ -70,9 +54,9 @@ extension Pizzabot {
     /// - Throws:
     /// - `PizzabotError.orderOutOfRange` indicates that there is at least one point which is out of delivery range
     func pointOutOfRange() throws {
-        guard let maxDeliveryDistance = self.maxDeliveryDistance else { return }
+        guard let deliveryDistance = self.deliveryDistance else { return }
         guard let points = self.points else { return }
-        guard points.filter({ $0.x > maxDeliveryDistance.x || $0.y > maxDeliveryDistance.y }).isEmpty else {
+        guard points.filter({ $0.x > deliveryDistance.x || $0.y > deliveryDistance.y }).isEmpty else {
             throw  PizzabotError.orderOutOfRange
         }
     }
@@ -83,7 +67,7 @@ extension Pizzabot {
     /// - Parameter first: describes the start point
     /// - Parameter next: describes end point
     /// - Returns: list of commands for pizzabot
-    private func getInstructions(for first: CGPoint, and next: CGPoint) -> [String] {
+    func createInstruction(for first: CGPoint, and next: CGPoint) -> [String] {
         var instructions: [String] = []
         let deltaX = Int(next.x - first.x)
         instructions += Array(repeating: (deltaX >= 0) ? PizzabotCommands.east.rawValue : PizzabotCommands.west.rawValue , count: abs(deltaX))

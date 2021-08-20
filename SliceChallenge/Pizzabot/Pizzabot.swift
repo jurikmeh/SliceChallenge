@@ -18,7 +18,7 @@ struct Pizzabot: PizzabotType {
     /// Returns list of instructions for pizzabot in one line
     /// - Parameter input: source string for getting instruction
     /// - Returns: list of commands for pizzabot
-    func getInstruction(input: String) -> String? {
+    func getInstruction() -> String? {
         var instructions: [String] = []
         guard let points = self.points else { return nil }
         for index in 0..<points.count - 1 {

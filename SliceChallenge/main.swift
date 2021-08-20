@@ -18,7 +18,7 @@ do {
     try validator.validate(input: sourceData)
     let gridData = try formatter.transform(input: sourceData)
     try bot.setData(gridSize: gridData.gridSize, points: gridData.points)
-    instruction = bot.getInstruction(input: sourceData)
+    instruction = bot.getInstruction()
 } catch let error as ValidationError {
     instruction = error.description
 } catch let error as FormatterError {

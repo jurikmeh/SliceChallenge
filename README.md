@@ -37,3 +37,8 @@ Enter input string using the following format: grid dimensions separated by "x" 
 - Open ```SliceChallenge.xcodeproj``` in the project folder
 - Select the  ```SliceChallenge``` scheme
 - Click ▶️ button or just use shortcut ```cmd+R```
+
+The performance of the application can be also checked by tests. Follow these steps:
+- Open ```SliceChallenge.xcodeproj``` in the project folder
+- Select the  ```PizzabotTests``` scheme
+- Use shortcut ```cmd+U``` to run tests
